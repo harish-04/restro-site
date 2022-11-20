@@ -5,6 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>food website</title>
 
     <!-- font awesome cdn link  -->
@@ -12,6 +13,18 @@
 
     <!-- custom css file link  -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+        font-family: Arial;
+        font-size: 17px;
+        padding: 8px;
+      }
+      h3{
+        text-align: center;
+      }
+        
+    </style>
 </head>
 <body>
     
@@ -27,9 +40,9 @@
         <a href="#speciality">speciality</a>
         <a href="#popular">popular</a>
         <a href="#gallery">gallery</a>
-        <a href="#review">review</a>
         <a href="#order">order</a>
         <a href="#payment">Payment</a>
+        <a href="feedback.html">feedback</a>
     </nav>
 
 </header>
@@ -206,9 +219,9 @@
 
     </div>
 
-</section>-->
+</section> 
 
-< popular section ends -->
+<!-- popular section ends -->
 
 <!-- steps section starts  -->
 
@@ -221,10 +234,6 @@
         <div class="box">
             <img src="images/step-1.jpg" alt="">
             <h3>choose your favorite food</h3>
-        </div>
-        <div class="box">
-            <img src="images/step-2.jpg" alt="">
-            <h3>free and fast delivery</h3>
         </div>
         <div class="box">
             <img src="images/step-3.jpg" alt="">
@@ -327,59 +336,7 @@
 </section>
 
 <!-- gallery section ends -->
-
-<!-- review section starts  -->
-<
-<section class="review" id="review">
-
-    <h1 class="heading"> our customers <span>reviews</span> </h1>
-
-    <div class="box-container">
-
-        <div class="box">
-            <img src="images/pic1.png" alt="">
-            <h3>john deo</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="far fa-star"></i>
-            </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti delectus, ducimus facere quod ratione vel laboriosam? Est, maxime rem. Itaque.</p>
-        </div>
-        <div class="box">
-            <img src="images/pic2.png" alt="">
-            <h3>john deo</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="far fa-star"></i>
-            </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti delectus, ducimus facere quod ratione vel laboriosam? Est, maxime rem. Itaque.</p>
-        </div>
-        <div class="box">
-            <img src="images/pic3.png" alt="">
-            <h3>john deo</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="far fa-star"></i>
-            </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti delectus, ducimus facere quod ratione vel laboriosam? Est, maxime rem. Itaque.</p>
-        </div>
-
-    </div>
-
-</section>
-
-<!-- review section ends -->
 <!-- order section starts  -->
-<
 <section class="order" id="order">
 
     <h1 class="heading"> <span>order</span> now </h1>
@@ -402,8 +359,6 @@
                 <input type="text" placeholder="food name">
             </div>
 
-            <textarea placeholder="address" name="" id="" cols="30" rows="10"></textarea>
-
             <input type="submit" value="order now" class="btn">
 
         </form>
@@ -413,7 +368,37 @@
 </section>
 
 <!-- order section ends -->
+<!--payment section starts-->
+<section class="payment" id="payment">
 
+    <h1 class="heading"> <span>pay</span> now </h1>
+
+    <div class="row">
+        <div class="image">
+            <img src="images/pay.jpg" alt="">
+        </div>
+        <form action="card.html" method="Post">
+                <div class="inputBox" >
+                    <h3 class="heading1">This is the payment section.</h3>
+                </div>
+                <div class="inputBox">
+                    <h4 class="heading1">Choose the mode of payment.</h4>
+                </div>
+            <div class="r1">
+                <table>
+                <tr><td><input type="submit" value="DEBIT/CREDIT" class="btn" action="card.html"></td></tr>
+                
+                
+                <!--<a href="#" class="btn" >Cash</a>-->
+                <tr><td><a href="#" class="btn">Cash</a></td></tr>
+                <tr><td><a href="upi.html" class="btn">UPI</a></td></tr>
+                <!---->
+            </div>
+            </table>
+        </form>
+    </div>
+</section>
+<!--Payment section ends-->
 <!-- footer section  -->
 
 <section class="footer">
@@ -434,11 +419,12 @@
 <!--<a href="#home" class="fas fa-angle-up" id="scroll-top"></a>-->
 
 <!-- loader  -->
-<!--<div class="loader-container">
+<!--
+<div class="loader-container">
     <img src="images/loader.gif" alt="">
 </div>-->
 <!-- custom js file link  -->
-<!--
-<script src="js/script.js"></script>-->
+
+<script src="js/script.js"></script>
 <body>
 </html>
