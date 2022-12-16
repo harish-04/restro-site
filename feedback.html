@@ -1,0 +1,145 @@
+<html>
+    <head>
+
+
+
+        <style>
+          .btn{
+  display: inline-block;
+  padding:.8rem 3rem;
+  border:.2rem solid var(--red);
+  color:var(--red);
+  cursor: pointer;
+  font-size: 1.7rem;
+  border-radius: .5rem;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  margin-top: 1rem;
+}
+
+.btn::before{
+  content: '';
+  position: absolute;
+  top:0; right: 0;
+  width:0%;
+  height:100%;
+  background:var(--red);
+  transition: .3s linear;
+  z-index: -1;
+}
+
+.btn:hover::before{
+  width:100%;
+  left: 0;
+}
+
+.btn:hover{
+  color:#fff;
+}
+body {
+  margin: 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: sans-serif;
+}
+
+h1,
+p {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+.app {
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.item {
+  width: 90px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+.radio {
+  display: none;
+}
+.radio ~ span {
+  
+  filter:grayscale(100);
+  font-size: 3.5rem;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.radio:checked ~ span {
+  filter:grayscale(0);
+  transition: 0.5s ease-in-out;
+}
+        </style>
+
+    </head>
+    <body>
+      <section class="payment" id="payment">
+      <form action="" method="post">
+        <div class="payment" id="payment">
+            <h1>Rate our food</h1>
+            <div class="container">
+              <div class="item">
+                <label for="0">
+                <input class="radio" type="radio" name="feedback" id="0" value="0" >
+                <span>🤬</span>
+              </label>
+              </div>
+              <div class="item">
+                <label for="1">
+                <input class="radio" type="radio" name="feedback" id="1" value="1">
+                <span>🙁</span>
+              </label>
+              </div>
+          
+              <div class="item">
+                <label for="2">
+                <input class="radio" type="radio" name="feedback" id="2" value="2">
+                <span>😶</span>
+              </label>
+              </div>
+          
+              <div class="item">
+                <label for="3">
+                <input class="radio" type="radio" name="feedback" id="3" value="3">
+                <span>😁</span>
+              </label>
+              </div>
+          
+              <div class="item">
+                <label for="4">
+                <input class="radio" type="radio" name="feedback" id="4" value="4">
+                <span>😍</span>
+              </label>
+              </div>
+          
+            </div>
+            <p>Let us know how we did</p>
+            <textarea id="ta" name="taf" rows="5" cols="50" placeholder="Feedback"></textarea>
+            </div>
+            <div><br> <a href="thankyou.html" class="btn">submit</a></div>
+        </form>
+        
+      </section>
+    </body>
+</html>

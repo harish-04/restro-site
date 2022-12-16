@@ -1,0 +1,105 @@
+<html>
+    <head>
+        <title>UPI Transaction</title>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .center{
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .center1{
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 45px;
+            padding: 10px;
+        }
+        .btn{
+            text-align: center;
+            margin-left: 525px;
+            margin-right: 500px;
+        }
+        body {
+          font-family: Arial;
+          font-size: 17px;
+          padding: 8px;
+        }
+        
+        * {
+          box-sizing: border-box;
+        }
+        .row {
+          display: -ms-flexbox; 
+          display: flex;
+          -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+          margin: 0 -16px;
+        }
+        
+        .container {
+          background-color: #f2f2f2;
+          padding: 5px 20px 15px 20px;
+          border: 1px solid lightgrey;
+          border-radius: 3px;
+        }
+        
+        input[type=text] {
+          width: 100%;
+          margin-bottom: 20px;
+          padding: 12px;
+          border: 1px solid #ccc;
+          border-radius: 3px;
+        }
+        .Ac{
+            font-family: Arial;
+            font-size: 23px;
+            padding: 8px;
+            margin-left :525px;
+            margin-right: 500px;
+        }
+    </style>
+    <script language="javascript">
+        function validate1(){
+            var msg=" ";
+            var mblN=document.Upifield.mobilenum.value;
+            var RMbl=new RegExp("^[0-9]{10}$"); 
+            if(!mblN.match(RMbl))
+					msg+="\n Enter 10 digit mobile number";
+            if(msg!=" ")
+			{
+				alert(msg);
+				return flase;
+			}  
+            document.Upifield.action="sucessful.html";
+			return true;
+        }
+    </script>
+    </head>
+    <body>
+        <section class="payment" id="payment">
+            <form method="post" name="Upifield" onsubmit="return validate1()">
+                <div class="row"> 
+                    <label for="fname" class="Ac" ><b>UPI Transaction</b></label>
+                    <table cellspacing="50" cellpadding='50' class="center" >   <tr> 
+                        <td > &nbsp; </td>   
+                        <td><div class="col-50">
+                                    <label for="cname">Enter mobile number</label>
+                                    <input type="text" id="cname" name="mobilenum" placeholder="Enter mobile number">
+                                </div></td></tr>
+                                
+                    </table>
+                    
+                    <div><input type="submit" value="pay now" class="btn" ></div> 
+                </div>
+                
+                    
+            </form>
+    </body>
+</html>
